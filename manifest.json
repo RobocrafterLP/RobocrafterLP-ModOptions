@@ -1,0 +1,71 @@
+{
+	"name": "ModOptions",
+	"namespace": "RobocrafterLP",
+	"version_number": "1.0.0",
+	"description": "Manifest-driven configuration screens and per-mod settings storage.",
+	"website_url": "",
+	"dependencies": [],
+	"extra": {
+		"godot": {
+			"authors": ["RobocrafterLP"],
+			"optional_dependencies": [],
+			"compatible_game_version": ["1.2.0.0"],
+			"compatible_mod_loader_version": ["6.2.0"],
+			"incompatibilities": [],
+			"load_before": [],
+			"tags": ["utility", "configuration"],
+			"config_schema": {
+				"title": "Mod Options Sample",
+				"description": "Example settings showing the supported manifest controls.",
+				"type": "object",
+				"properties": {
+					"sample_toggle": {
+						"type": "boolean",
+						"title": "Example toggle",
+						"description": "Boolean values appear as a toggle control.",
+						"default": true
+					},
+					"sample_slider": {
+						"type": "number",
+						"title": "Example slider",
+						"minimum": 0,
+						"maximum": 2,
+						"multipleOf": 0.1,
+						"default": 1
+					},
+					"sample_dropdown": {
+						"type": "string",
+						"title": "Example dropdown",
+						"enum": ["low", "medium", "high"],
+						"enumNames": ["Low", "Medium", "High"],
+						"default": "medium"
+					},
+					"sample_text": {
+						"type": "string",
+						"title": "Example text",
+						"default": "Hello Brotato"
+					},
+					"sample_color": {
+						"type": "string",
+						"format": "color",
+						"title": "Example color",
+						"default": "76ff76"
+					},
+					"advanced": {
+						"type": "object",
+						"title": "Nested example settings",
+						"properties": {
+							"enabled": {
+								"type": "boolean",
+								"title": "Nested enabled",
+								"default": false
+							}
+						}
+					}
+				}
+			},
+			"description_rich": "",
+			"image": null
+		}
+	}
+}
